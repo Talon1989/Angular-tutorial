@@ -11,7 +11,6 @@ export class AppComponent {
 
   rootItems = ['Apples', 'Bananas', 'Cherries'];
   onItemWasAdded(newItem) {
-    console.log('new item from app-component : '+newItem);
     console.log(this.rootItems);
     this.rootItems.push(newItem);
     console.log(this.rootItems);

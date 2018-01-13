@@ -12,7 +12,7 @@ export class CartComponent implements OnInit {
   @Output() itemAdded = new EventEmitter<string>();
 
   addTheItem() {
-    console.log(this.newItem);
+    console.log('new item from cart-component : '+this.newItem);
     this.itemAdded.emit(this.newItem);
   }
 
