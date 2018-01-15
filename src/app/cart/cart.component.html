@@ -6,16 +6,21 @@
           , 'btn-default' : newItem==''}">
     Add Item
   </button>
-  <p *ngIf="newItem===''" style="color: red" >Please enter a value</p>
+  <p *ngIf="newItem===''" [ngStyle]="{color : 'red'}" >Please enter a value</p>
+
+  <!--style="color: red"-->
 
   <hr/>
 
   <ul class="list-group">
     <li class="list-group-item"
         *ngFor="let i of items; let n = index"
-        [ngStyle]="{backgroundColor : n%2 === 0 ? 'yellow' : 'blue'}">
+        [ngStyle]="{backgroundColor : n%2===0 ? 'yellow' : 'blue'}">
       {{i}}
     </li>
   </ul>
+
+  <!--[ngStyle]="{'background-color' : 'yellow'}">-->
+  <!--[ngStyle]="{backgroundColor : 'yellow'}">-->
 
 </div>
