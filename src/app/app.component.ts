@@ -11,15 +11,11 @@ import * as _ from 'lodash';
 export class AppComponent {
   title = 'Fabio application';
   rootName = 'Fabio';
-  number = 1;
+  rootItems = ['Apple', 'Banana', 'Cherry'];
 
-  onIncrease() {
-    // this.number *= 2;
-    this.number = _.random(0, 10);
-  }
-
-  onNameChanged(newName) {
-    this.rootName = newName;
+  onItemWasAdded(event) {
+    this.rootItems.push(event);
+    console.log(this.rootItems);
   }
 
 }
