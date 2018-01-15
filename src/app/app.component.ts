@@ -8,6 +8,11 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'Fabio application';
   rootName = 'Fabio';
+  number = 1;
+
+  onIncrease() {
+    this.number *= 2;
+  }
 
   onNameChanged(newName) {
     this.rootName = newName;
