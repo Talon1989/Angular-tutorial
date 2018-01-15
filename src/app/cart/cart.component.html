@@ -10,7 +10,9 @@
   <hr/>
 
   <ul class="list-group">
-    <li class="list-group-item" *ngFor="let i of items">
+    <li class="list-group-item"
+        *ngFor="let i of items; let n = index"
+        [ngStyle]="{backgroundColor : n%2 === 0 ? 'yellow' : 'blue'}">
       {{i}}
     </li>
   </ul>
